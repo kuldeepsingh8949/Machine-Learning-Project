@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction System for Farmers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/field-rice-with-sun-setting-it_1167972-4913.jpg?size=626&ext=jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Container for main content */
+        .main-container {
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 50px;
+            color: white;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);  
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        /* Styling the form inputs */
+        .form-control {
+            background-color: #fff;
+            color: black;
+            border-radius: 25px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #28a745;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Submit button styles */
+        .btn-primary {
+            background-color: #28a745;
+            border: none;
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            transform: scale(1.03);
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #28a745 !important;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">FarmTech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/project">project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <h1>Crop Prediction System</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="nitrogen">Nitrogen (N)</label>
+                <input type="number" class="form-control" name="N" id="nitrogen" placeholder="Enter Nitrogen value" required>
+            </div>
+            <div class="form-group">
+                <label for="phValue">pH Value</label>
+                <input type="text" class="form-control" name="PH" id="phValue" placeholder="Enter pH value" required>
+            </div>
+            <div class="form-group">
+                <label for="pValue">Phosphorous (P)</label>
+                <input type="number" class="form-control" name="P" id="pValue" placeholder="Enter Phosphorous value" required>
+            </div>
+            <div class="form-group">
+                <label for="kValue">Potassium (K)</label>
+                <input type="number" class="form-control" name="K" id="kValue" placeholder="Enter Potassium value" required>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="text" class="form-control" name="temperature" id="temperature" placeholder="Enter Temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%)</label>
+                <input type="text" class="form-control" name="humidity" id="humidity" placeholder="Enter Humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm)</label>
+                <input type="text" class="form-control" name="rainfall" id="rainfall" placeholder="Enter Rainfall" required>
+            </div>
+            <!-- Improved call to action button -->
+            <button type="submit" class="btn btn-primary">Go for Prediction</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Crop Prediction System. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FarmTech</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Georgia', serif;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #28a745 !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('https://img.freepik.com/premium-photo/field-rice-with-sun-setting-it_1167972-4913.jpg?size=626&ext=jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+            background-image: url('https://img.freepik.com/premium-photo/field-rice-with-sun-setting-it_1167972-4913.jpg?size=626&ext=jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+        }
+
+        .about-values {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about-values .value-box {
+            background-color: #000000;
+            padding: 30px;
+            border-radius: 15px;
+            width: 30%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-values .value-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-box h3 {
+            font-size: 1.8rem;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .value-box p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">FarmTech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/project">project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div>
+            <h1>About FarmTech</h1>
+            <p>Empowering Farmers through Innovation</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Who We Are</h2>
+        <p>FarmTech is dedicated to helping farmers embrace modern technology for smarter, more efficient farming. Our solutions range from crop prediction to soil management, helping farmers make data-driven decisions that boost productivity and sustainability.</p>
+        <div class="about-values">
+            <div class="value-box">
+                <h3>Innovation</h3>
+                <p>Using k-Nearest Neighbors (k-NN) algorithms to recommend the best crops is a game-changing breakthrough in precision agriculture. K-NN algorithms can find patterns and connections in historical data on crop performance, weather patterns, and soil conditions that might not be immediately obvious. With this method, farmers can get customized advice based on the environmental conditions and particulars of their own farms. For example, the k-NN algorithm can recommend a crop as a good choice if the soil properties and climate of a farmer's field are similar to those in areas where that crop has prospered. This data-driven approach lessens the trial-and-error method typically connected with crop selection while improving decision-making, supporting sustainable farming methods, and eventually increasing agricultural yields.</p>
+            </div>
+            <div class="value-box">
+                <h3>Sustainability</h3>
+                <p>K-Nearest Neighbors (KNN) algorithms can be used to optimize crop suggestions depending on soil health and environmental circumstances, hence promoting sustainability in farming. KNN can determine which crops would be best for a particular site by examining historical data on crop yields, soil characteristics, and local climate conditions. This method predicts which crops would flourish in comparable conditions by taking into account the closest data points, or "neighbors," in the dataset. This increases yield while decreasing resource usage and lessening the impact on the environment. KNN assists farmers in making well-informed decisions that promote sustainable agriculture, enhance soil health, and lessen dependency on chemical inputs by recommending crops that are most suited to the current environment.
+                </p>
+            </div>
+            <div class="value-box">
+                <h3>Community</h3>
+                <p>Enhancing community-based crop recommendations by utilizing K-Nearest Neighbors (KNN) algorithms can strengthen agricultural networks and promote information exchange among farmers. Through the utilization of KNN for the analysis of data from nearby farms, such as crop performance, climate conditions, and soil quality, farmers can obtain customized suggestions that mirror the combined achievements and experiences of their local community. By working together, farmers can take advantage of the collective knowledge of comparable farming environments in their area, encouraging the adoption of crops that have previously shown success in the area. As a result, farmers are more informed, more unified, and able to maximize resource utilization, support sustainable practices, and increase total agricultural productivity by exchanging knowledge and making data-driven recommendations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 FarmTech. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

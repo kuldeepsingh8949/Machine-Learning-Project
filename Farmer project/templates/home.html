@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FarmTech</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-image: url('https://img.freepik.com/free-photo/closeup-shot-rice-plant-sunset-with-plantation-background_181624-42264.jpg?size=626&ext=jpg&ga=GA1.1.1555594121.1725619868&semt=ais_hybrid');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #28a745 !important;
+        }
+
+        .header {
+            text-align: center;
+            color: #000;
+            font-size: 2.5rem;
+            margin-top: 60px;
+            text-transform: capitalize;
+            animation: fadeIn 2s ease;
+        }
+
+        .header-content {
+            text-align: center;
+            color: #000;
+            padding-top: 10%;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn-suggestion {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .btn-suggestion:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-down {
+            font-size: 1.2rem;
+            color: #000000;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">FarmTech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/project">project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <!-- Welcome Header -->
+        <div class="header">
+            <h2><b>Welcome to the Farmer's World</b></h2>
+            <h2><b>Enhancing Agricultural Efficiency: 
+            A Smart Crop Prediction System Leveraging Data Analytics and Machine Learning for Optimal Yield Forecasting.</b></h2>
+        </div>
+
+        <!-- Home Page Content -->
+        <div class="header-content">
+            <img src="/static/me.jpg" alt="Profile Photo" class="profile-photo">
+            <h1>Welcome to FarmTech</h1>
+            <p>Innovating Agriculture for a Better Tomorrow</p>
+            <p>A Crop Prediction System is a technological solution that uses data analytics and machine learning to forecast crop yields and suggest optimal farming practices. By analyzing various factors such as soil quality, weather patterns, seed variety, and historical crop data, the system provides farmers with accurate predictions on which crops will thrive under specific conditions. This helps in reducing risks associated with crop failure, improving resource management, and boosting overall agricultural productivity. By leveraging such systems, farmers can make informed decisions, optimize planting schedules, and increase their crop yield, contributing to sustainable farming practices and food security.</p>
+            <!-- Suggestion Button -->
+            <a href="/project" class="btn btn-suggestion">Give a Suggestion</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 FarmTech. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

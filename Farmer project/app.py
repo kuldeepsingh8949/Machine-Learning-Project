@@ -88,13 +88,14 @@ def feedback():
                 file.write(feedback_message)
             
             print("Feedback received and saved.")
-            return render_template('feedback_success.html', name=name)
+            return render_template('feedback.html', success="Your feedback has been submitted successfully.")
 
         except Exception as e:
             print(f"An error occurred while saving feedback: {e}")
             return render_template('feedback.html', error="There was an error saving your feedback. Please try again.")
 
     return render_template('feedback.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

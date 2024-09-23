@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Attack Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Set a background image for the entire page */
+    body {
+      background: url('https://media.istockphoto.com/id/1156928011/photo/heart-attack-heart-attack-conceptual-artwork-3d-illustration.jpg?s=612x612&w=0&k=20&c=A2kWPu_dG5vmcaKcfCGA6FVRRIHRJ83R0HhlAys5fK4=') no-repeat center center fixed;
+      background-size: cover;
+      color: rgb(0, 0, 0);
+    }
+
+    /* Darken the hero section for better text visibility */
+    .bg-primary {
+      background-color: rgba(0, 0, 0, 0.85) !important;
+    }
+
+    /* Use semi-transparent backgrounds for other sections */
+    .bg-light {
+      background-color: rgba(0, 0, 0, 0.85) !important;
+      color: #b1b1b1;
+    }
+
+    /* Footer background with slight transparency */
+    footer {
+      background-color: rgba(220, 220, 220, 0.9);
+    }
+
+    /* Navbar adjustments */
+    .navbar-light .navbar-nav .nav-link {
+      color: #000;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #000000;
+    }
+
+    /* Image adjustments */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Add padding to sections */
+    section {
+      padding: 60px 0;
+    }
+
+    /* Adjust the text-shadow for better visibility on the background */
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Heart Attack Prediction</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dataset</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Predict</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 text-shadow">Heart Attack Prediction &hearts;</h1>
+      <p class="lead text-shadow">Predict the risk of heart attack using patient data with machine learning algorithms.</p>
+    </div>
+  </section>
+<!-- About Us Section -->
+<section id="about-us" class="bg-light py-5">
+  <div class="container">
+    <h2>About Me :</h2>
+    <p>I am Kuldeep Singh, currently pursuing a BTech at Arya College of Engineering. I am passionate about technology and continually strive to enhance my skills, particularly in machine learning, artificial intelligence (AI), and Python programming. I have worked on several projects in these fields, including a heart attack prediction model, which applies advanced machine learning techniques to assess health risks based on patient data. By analyzing key health metrics such as age, cholesterol levels, blood pressure, and more, the model predicts the likelihood of a heart attack. This project has enabled me to apply theoretical concepts to real-world healthcare challenges, showcasing the practical impact of AI in critical decision-making.
+      My hands-on learning approach, driven by curiosity, helps me quickly grasp and apply new ideas. I am committed to hard work and continuously improving my skills, including refining my body language to present myself confidently in professional and personal settings. I thrive in collaborative environments, where I learn from others and contribute meaningfully with my knowledge.
+    </p>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2>About the Project :</h2>
+      <p>This project leverages machine learning to predict the likelihood of heart attacks based on patient data such as age, cholesterol level, blood pressure, and more.</p>
+      <p>In our heart attack prediction project, Logistic Regression plays a critical role in classifying the likelihood of a patient having a heart attack based on various health parameters. This algorithm is well-suited for the task because it helps model the relationship between the input features (such as age, cholesterol levels, blood pressure, etc.) and the binary outcome (heart attack: yes or no).</p>
+      <p>Key Features for Prediction:
+
+        <p>Age: Increased age is a significant risk factor for heart disease.</p>
+        <p>Sex: Men are generally at higher risk than women for heart attacks.</p>
+        <p>Cholesterol Levels: High cholesterol can lead to plaque build-up, increasing heart attack risk.</p>
+        <p>Blood Pressure: Elevated blood pressure is a known factor in heart disease.</p>
+        <p>Chest Pain Type: Different types of chest pain provide valuable clues about heart health.</p>
+        <p>Resting Electrocardiographic Results: Provides electrical signals of the heart's activity.</p>
+      </p>
+      <p>The goal of this machine learning project is to develop a system that predicts the risk of heart disease based on various health indicators. This system will assist healthcare professionals by providing predictions that can be used as part of a diagnostic process.</p>
+    </div>
+  </section>
+
+  <!-- Dataset Section -->
+  <section id="dataset" class="bg-light py-5">
+    <div class="container">
+      <h2>Dataset Overview :</h2>
+      <p>The dataset used in this project includes medical records of patients with features such as age, sex, cholesterol levels, resting blood pressure, and more. These features are used to train the machine learning model.</p>
+      <p>Our team is a group of dedicated professionals with a shared vision of using technology to solve complex medical challenges. We are passionate about leveraging data science and machine learning to make healthcare more accessible and improve diagnostic processes</p>
+      <p>We believe that predictive modeling can play a vital role in preventing severe health issues by identifying risks early on. Our Heart Attack Prediction project is part of this mission, helping healthcare professionals make informed decisions and ultimately save lives.</p>
+
+      <a href="project" class="btn btn-light btn-lg mt-3">Try Prediction</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2024 Heart Attack Prediction Project | All Rights Reserved</p>
+      <p>My Account on :
+        <a href="https://www.linkedin.com" class="text-white">LinkedIn</a>  |
+        <a href="https://github.com" class="text-white">GitHub</a>  
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
